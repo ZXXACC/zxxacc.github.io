@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="shadowsocks,ubuntu,终端," />
 
 
 
@@ -79,17 +79,18 @@
 
 
 
-<meta name="description" content="记录 学习">
-<meta property="og:type" content="website">
-<meta property="og:title" content="标签">
-<meta property="og:url" content="http://zxxacc.github.io/tags/index.html">
+<meta name="description" content="Ubuntu上shadowscosks的安装配置以及使终端走ss的方法。">
+<meta name="keywords" content="shadowsocks,ubuntu,终端">
+<meta property="og:type" content="article">
+<meta property="og:title" content="在Ubuntu上愉快的使用SS">
+<meta property="og:url" content="http://zxxacc.github.io/2017/10/28/在Ubuntu上愉快的使用SS/index.html">
 <meta property="og:site_name" content="CCBlog">
-<meta property="og:description" content="记录 学习">
+<meta property="og:description" content="Ubuntu上shadowscosks的安装配置以及使终端走ss的方法。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-10-16T03:10:09.823Z">
+<meta property="og:updated_time" content="2017-10-28T10:03:37.413Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="标签">
-<meta name="twitter:description" content="记录 学习">
+<meta name="twitter:title" content="在Ubuntu上愉快的使用SS">
+<meta name="twitter:description" content="Ubuntu上shadowscosks的安装配置以及使终端走ss的方法。">
 
 
 
@@ -119,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://zxxacc.github.io/tags/"/>
+  <link rel="canonical" href="http://zxxacc.github.io/2017/10/28/在Ubuntu上愉快的使用SS/"/>
 
 
 
 
 
-  <title>标签 | CCBlog</title>
+  <title>在Ubuntu上愉快的使用SS | CCBlog</title>
   
 
 
@@ -274,40 +275,196 @@
 
   <div id="posts" class="posts-expand">
     
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://zxxacc.github.io/2017/10/28/在Ubuntu上愉快的使用SS/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="ZXXACC">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/6.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="CCBlog">
+    </span>
+
     
-    
-    <div class="post-block page">
       <header class="post-header">
 
-	<h1 class="post-title" itemprop="name headline">标签</h1>
-
-
-
-</header>
-
-      
-      
-      
-      <div class="post-body">
         
         
-          <div class="tag-cloud">
-            <div class="tag-cloud-title">
-                目前共计 4 个标签
-            </div>
-            <div class="tag-cloud-tags">
-              <a href="/tags/shadowsocks/" style="font-size: 12px; color: #ccc">shadowsocks</a> <a href="/tags/ubuntu/" style="font-size: 12px; color: #ccc">ubuntu</a> <a href="/tags/终端/" style="font-size: 12px; color: #ccc">终端</a> <a href="/tags/解忧杂货店/" style="font-size: 12px; color: #ccc">解忧杂货店</a>
-            </div>
-          </div>
+          <h1 class="post-title" itemprop="name headline">在Ubuntu上愉快的使用SS</h1>
         
-      </div>
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-10-28T16:33:26+08:00">
+                2017-10-28
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/linux/" itemprop="url" rel="index">
+                    <span itemprop="name">linux</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
       
+
+      
+        <p>Ubuntu上shadowscosks的安装配置以及使终端走ss的方法。<a id="more"></a></p>
+<h1 id="配置shadowsocks"><a href="#配置shadowsocks" class="headerlink" title="配置shadowsocks"></a>配置shadowsocks</h1><h2 id="命令行版本"><a href="#命令行版本" class="headerlink" title="命令行版本"></a>命令行版本</h2><h3 id="安装："><a href="#安装：" class="headerlink" title="安装："></a>安装：</h3><pre><code>pip install shadowsocks
+</code></pre><h3 id="启动："><a href="#启动：" class="headerlink" title="启动："></a>启动：</h3><pre><code>sslocal -s server_ip -p server_port  -l 1080 -k &quot;password&quot; -t 600 -m aes-256-cfb
+</code></pre><p>-s：vps的ip -p：服务器端口 -l：本地端口 -k：密码 -t：延时 -m：代理方式</p>
+<p>还可以使用下面这样来启动：</p>
+<pre><code>ssl -c /配置文件路径
+</code></pre><p>任意位置新建一个shadowsocks.json文件。</p>
+<pre><code>{
+&quot;server&quot;:&quot;11.22.33.44&quot;,
+&quot;server_port&quot;:50003,
+&quot;local_port&quot;:1080,
+&quot;password&quot;:&quot;123456&quot;,
+&quot;timeout&quot;:600,
+&quot;method&quot;:&quot;aes-256-cfb&quot;
+}
+</code></pre><p>填入需要的信息即可。<br>开启之后这个终端不能关掉。如果想要后台，可以这样在命令前面加上nohup：</p>
+<pre><code>nohup sslocal xxxxxxxxxx
+</code></pre><p>更多参考<a href="https://www.ibm.com/developerworks/cn/linux/l-cn-nohup/index.html" target="_blank" rel="external">命令后台运行的方法</a></p>
+<h2 id="GUI版本"><a href="#GUI版本" class="headerlink" title="GUI版本"></a>GUI版本</h2><h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><pre><code>sudo add-apt-repository ppa:hzwhuang/ss-qt5 //添加PPA源
+sudo apt-get update //更新软件列表
+sudo apt-get install shadowsocks-qt5 //安装
+</code></pre><h3 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h3><p>点开gui界面填入信息即可。</p>
+<h1 id="代理终端"><a href="#代理终端" class="headerlink" title="代理终端"></a>代理终端</h1><h2 id="使用proxychains"><a href="#使用proxychains" class="headerlink" title="使用proxychains"></a>使用proxychains</h2><h3 id="安装-1"><a href="#安装-1" class="headerlink" title="安装"></a>安装</h3><pre><code>sudo apt-get install proxychains
+sudo gedit /etc/proxychains.conf
+</code></pre><p>把里面的最后一行设置改为 socks5 127.0.0.1 1080 就好了。之后命令需要FQ的时候，在前面加上 proxychains 就行。例如：</p>
+<pre><code>proxychains pip install tensorflow
+</code></pre><p>解决了终端的自由问题哈哈。</p>
+
       
     </div>
     
     
     
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/shadowsocks/" rel="tag"><i class="fa fa-tag"></i> shadowsocks</a>
+          
+            <a href="/tags/ubuntu/" rel="tag"><i class="fa fa-tag"></i> ubuntu</a>
+          
+            <a href="/tags/终端/" rel="tag"><i class="fa fa-tag"></i> 终端</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/10/07/解忧杂货店随想/" rel="next" title="解忧杂货店随笔">
+                <i class="fa fa-chevron-left"></i> 解忧杂货店随笔
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
   </div>
 
 
@@ -340,8 +497,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -407,6 +573,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#配置shadowsocks"><span class="nav-number">1.</span> <span class="nav-text">配置shadowsocks</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#命令行版本"><span class="nav-number">1.1.</span> <span class="nav-text">命令行版本</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#安装："><span class="nav-number">1.1.1.</span> <span class="nav-text">安装：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#启动："><span class="nav-number">1.1.2.</span> <span class="nav-text">启动：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#GUI版本"><span class="nav-number">1.2.</span> <span class="nav-text">GUI版本</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#安装"><span class="nav-number">1.2.1.</span> <span class="nav-text">安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#配置"><span class="nav-number">1.2.2.</span> <span class="nav-text">配置</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#代理终端"><span class="nav-number">2.</span> <span class="nav-text">代理终端</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#使用proxychains"><span class="nav-number">2.1.</span> <span class="nav-text">使用proxychains</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#安装-1"><span class="nav-number">2.1.1.</span> <span class="nav-text">安装</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       

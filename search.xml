@@ -3,10 +3,60 @@
   
     
     <entry>
+      <title><![CDATA[在Ubuntu上愉快的使用SS]]></title>
+      <url>/2017/10/28/%E5%9C%A8Ubuntu%E4%B8%8A%E6%84%89%E5%BF%AB%E7%9A%84%E4%BD%BF%E7%94%A8SS/</url>
+      <content type="html"><![CDATA[<p>Ubuntu上shadowscosks的安装配置以及使终端走ss的方法。<a id="more"></a></p>
+<h1 id="配置shadowsocks"><a href="#配置shadowsocks" class="headerlink" title="配置shadowsocks"></a>配置shadowsocks</h1><h2 id="命令行版本"><a href="#命令行版本" class="headerlink" title="命令行版本"></a>命令行版本</h2><h3 id="安装："><a href="#安装：" class="headerlink" title="安装："></a>安装：</h3><pre><code>pip install shadowsocks
+</code></pre><h3 id="启动："><a href="#启动：" class="headerlink" title="启动："></a>启动：</h3><pre><code>sslocal -s server_ip -p server_port  -l 1080 -k &quot;password&quot; -t 600 -m aes-256-cfb
+</code></pre><p>-s：vps的ip -p：服务器端口 -l：本地端口 -k：密码 -t：延时 -m：代理方式</p>
+<p>还可以使用下面这样来启动：</p>
+<pre><code>ssl -c /配置文件路径
+</code></pre><p>任意位置新建一个shadowsocks.json文件。</p>
+<pre><code>{
+&quot;server&quot;:&quot;11.22.33.44&quot;,
+&quot;server_port&quot;:50003,
+&quot;local_port&quot;:1080,
+&quot;password&quot;:&quot;123456&quot;,
+&quot;timeout&quot;:600,
+&quot;method&quot;:&quot;aes-256-cfb&quot;
+}
+</code></pre><p>填入需要的信息即可。<br>开启之后这个终端不能关掉。如果想要后台，可以这样在命令前面加上nohup：</p>
+<pre><code>nohup sslocal xxxxxxxxxx
+</code></pre><p>更多参考<a href="https://www.ibm.com/developerworks/cn/linux/l-cn-nohup/index.html" target="_blank" rel="external">命令后台运行的方法</a></p>
+<h2 id="GUI版本"><a href="#GUI版本" class="headerlink" title="GUI版本"></a>GUI版本</h2><h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><pre><code>sudo add-apt-repository ppa:hzwhuang/ss-qt5 //添加PPA源
+sudo apt-get update //更新软件列表
+sudo apt-get install shadowsocks-qt5 //安装
+</code></pre><h3 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h3><p>点开gui界面填入信息即可。</p>
+<h1 id="代理终端"><a href="#代理终端" class="headerlink" title="代理终端"></a>代理终端</h1><h2 id="使用proxychains"><a href="#使用proxychains" class="headerlink" title="使用proxychains"></a>使用proxychains</h2><h3 id="安装-1"><a href="#安装-1" class="headerlink" title="安装"></a>安装</h3><pre><code>sudo apt-get install proxychains
+sudo gedit /etc/proxychains.conf
+</code></pre><p>把里面的最后一行设置改为 socks5 127.0.0.1 1080 就好了。之后命令需要FQ的时候，在前面加上 proxychains 就行。例如：</p>
+<pre><code>proxychains pip install tensorflow
+</code></pre><p>解决了终端的自由问题哈哈。</p>
+]]></content>
+      
+        <categories>
+            
+            <category> linux </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> shadowsocks </tag>
+            
+            <tag> ubuntu </tag>
+            
+            <tag> 终端 </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[解忧杂货店随笔]]></title>
       <url>/2017/10/07/%E8%A7%A3%E5%BF%A7%E6%9D%82%E8%B4%A7%E5%BA%97%E9%9A%8F%E6%83%B3/</url>
-      <content type="html"><![CDATA[<hr>
-<p>这部被称为最非东野圭吾的东野圭吾作品，没有罪案，没有侦探，而是以人与人之间的羁绊为主题。它是偏暖的，乐观的，张扬善的。是那种可信的，常人的善。它超越了推理小说的范围，却比推理小说更加扣人心弦。<a id="more"></a></p>
+      <content type="html"><![CDATA[<p>这部被称为最非东野圭吾的东野圭吾作品，没有罪案，没有侦探，而是以人与人之间的羁绊为主题。它是偏暖的，乐观的，张扬善的。是那种可信的，常人的善。它超越了推理小说的范围，却比推理小说更加扣人心弦。<a id="more"></a></p>
 <p>非常喜欢最后浪矢爷爷这封信。</p>
 <pre><code>地图是一张白纸，这当然很伤脑筋，任何人都会不知所措。
 可是换个角度来看，正因为是一张白纸，才可以随心所欲地描绘地图。一切全在你自己。对你来说，一切都是自由的，在你面前是无限的可能。这可是很棒的事啊。我衷心祈祷你可以相信自己，无悔的燃烧自己的人生。
